@@ -1,22 +1,28 @@
 import firebase from "firebase/app";
 import "./QuestionMessage.css";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faArrowAltCircleUp,
+  faArrowAltCircleDown,
+} from "@fortawesome/free-solid-svg-icons";
+
 function QuestionMessage(props) {
   const message = props.message;
   const db = props.db;
 
-  function handleVoteUp(event) {
+  function handleVoteUp(id) {
     if (db) {
       db.collection("message")
-        .doc(event.target.id)
+        .doc(id)
         .update({ votes: firebase.firestore.FieldValue.increment(1) });
     }
   }
 
-  function handleVoteDown(event) {
+  function handleVoteDown(id) {
     if (db) {
       db.collection("message")
-        .doc(event.target.id)
+        .doc(id)
         .update({ votes: firebase.firestore.FieldValue.increment(-1) });
     }
   }
@@ -26,11 +32,24 @@ function QuestionMessage(props) {
       <div>{"this is my name"}</div>
       <div className="text">{message.text}</div>
       <div className="arrows">
-        <button className="up" onClick={handleVoteUp} id={message.id}>
-          ^
+        {console.log(message)}
+        <button
+          className="up"
+          onClick={() => handleVoteUp(message.id)}
+          id={message.id}
+        >
+          <i>
+            <FontAwesomeIcon icon={faArrowAltCircleUp} color="#25D959" />
+          </i>
         </button>
-        <button className="up" onClick={handleVoteDown} id={message.id}>
-          v
+        <button
+          className="up"
+          onClick={() => handleVoteDown(message.id)}
+          id={message.id}
+        >
+          <i>
+            <FontAwesomeIcon icon={faArrowAltCircleDown} color="#25D959" />
+          </i>
         </button>
         <span className="votes">{message.votes}</span>
       </div>
