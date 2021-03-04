@@ -1,0 +1,31 @@
+.container {
+  margin: 20px 10px 10px 10px;
+  text-align: left;
+  width: 54vw;
+  border: 2px solid #222222;
+  border-radius: 10px;
+  background-color: #222222;
+}
+
+.question {
+  padding: 0px 15px;
+  margin: 3px 3px;
+  background-color: #161616;
+  text-align: left;
+  font-size: 20px;
+  color: white;
+  border-radius: 5px;
+  height: calc((35vh - 140px) / 3);
+  line-height: calc((35vh - 140px) / 3);
+}
+
+.title {
+  text-align: left;
+  font-size: 25px;
+  color: white;
+  padding: 7px 10px;
+}
+
+.votecount {
+  float: right;
+}

@@ -1,0 +1,27 @@
+.toolbar {
+  width: 100vw;
+  height: 50px;
+  background-color: #1b1b1b;
+  bottom: 0;
+  position: fixed;
+}
+
+.icon {
+  height: 50px;
+}
+
+.icon:hover {
+  filter: brightness(140%);
+}
+
+.left {
+  position: relative;
+  float: left;
+}
+
+.centre {
+  width: 430px;
+  height: auto;
+  margin: 0 auto;
+  position: relative;
+}

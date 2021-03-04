@@ -1,0 +1,10 @@
+.screen {
+  display: flex;
+  left: 0;
+  width: 55vw;
+  height: 65vh;
+}
+
+.window {
+  /* padding: 7vh 0 0 0; */
+}

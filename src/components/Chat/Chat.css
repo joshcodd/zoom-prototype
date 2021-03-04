@@ -1,0 +1,115 @@
+:root {
+  --main-color: #161616;
+  --secondary-color: white;
+  --main-text-color: #3e5869;
+  --secondary-text-color: #b0c7d6;
+  --send-message-form: #f5f5f5;
+}
+
+.leaveButton {
+  border: 0px;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  margin: 11.5px 15px 11.5px 0px;
+  float: right;
+  width: 70px;
+  height: 27px;
+  border-radius: 8px;
+  background-color: #b32323;
+}
+
+.box {
+  background-color: #b32323;
+  width: 50px;
+  height: 10px;
+}
+
+.chat {
+  margin: 0vh 0 0 0;
+
+  height: 100vh;
+  width: 400px;
+  background-color: #222222;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.inputArea {
+  width: 370px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 0 15px 55px 15px;
+}
+
+.input {
+  background-color: #222222;
+  color: white;
+  border-color: #222222;
+}
+
+.sendButton {
+  width: 55px;
+  height: 22px;
+  background-color: #222222;
+  border: 1px solid white;
+  border-radius: 100px;
+  color: white;
+  font-size: 13px;
+  font-weight: 500;
+  float: left;
+  margin: 5px 0 2px 10px;
+}
+
+.sendButton:hover {
+  background-color: white;
+  border: 1px solid white;
+  color: #222222;
+}
+
+.leftButton {
+  border: 2px solid white;
+  background-color: #222222;
+  color: white;
+  border-radius: 50px 0 0 50px;
+  font-size: 17px;
+  width: 100px;
+  height: 25px;
+}
+
+.rightButton {
+  border: 2px solid white;
+  background-color: #222222;
+  border-radius: 0 50px 50px 0;
+  color: white;
+  font-size: 17px;
+  width: 100px;
+  height: 25px;
+}
+
+.rightButton:hover,
+.leftButton:hover {
+  background-color: white;
+  border-color: white;
+  color: #222222;
+}
+
+.splitButton {
+  margin: 20px 0 0 0;
+}
+
+.message-list {
+  padding: 0;
+  margin: 0;
+}
+
+.messages {
+  float: left;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  width: 400px;
+  margin: 10px 0 0 0;
+  height: calc(100vh - 200px);
+}
