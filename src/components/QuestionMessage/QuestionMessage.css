@@ -29,12 +29,31 @@
 
 .arrows {
   position: absolute;
-  height: 20px;
-  top: calc(40%);
+  top: calc(50% - 19px);
   right: 0;
+  height: 37px;
+  margin-right: 35px;
+  line-height: 28px;
 }
 
 .votes {
-  margin: 0 10px 0 10px;
+  position: absolute;
+  margin: 5px 10px 10px 5px;
   color: #25d959;
+  display: inline;
+}
+
+button {
+  background: transparent;
+  border: none;
+  padding: 2px;
+  margin: 5px 0px 5px 0px;
+}
+
+button:hover {
+  filter: brightness(200%);
+}
+
+.arrowIcon {
+  font-size: 24px;
 }

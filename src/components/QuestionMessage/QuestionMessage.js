@@ -39,7 +39,11 @@ function QuestionMessage(props) {
           id={message.id}
         >
           <i>
-            <FontAwesomeIcon icon={faArrowAltCircleUp} color="#25D959" />
+            <FontAwesomeIcon
+              icon={faArrowAltCircleUp}
+              className="arrowIcon"
+              color="#25D959"
+            />
           </i>
         </button>
         <button
@@ -48,10 +52,14 @@ function QuestionMessage(props) {
           id={message.id}
         >
           <i>
-            <FontAwesomeIcon icon={faArrowAltCircleDown} color="#25D959" />
+            <FontAwesomeIcon
+              icon={faArrowAltCircleDown}
+              className="arrowIcon"
+              color="#25D959"
+            />
           </i>
         </button>
-        <span className="votes">{message.votes}</span>
+        <div className="votes">{message.votes}</div>
       </div>
     </li>
   );
