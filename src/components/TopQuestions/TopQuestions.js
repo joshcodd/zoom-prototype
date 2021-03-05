@@ -44,6 +44,12 @@ function TopQuestions(props) {
     // eslint-disable-next-line
   }, [topQuestions]);
 
+  function removeQuestion(id) {
+    if (db) {
+      db.collection("message").doc(id).delete();
+    }
+  }
+
   return (
     <div className="container">
       <div className="title">Top Questions:</div>
@@ -52,6 +58,10 @@ function TopQuestions(props) {
           return (
             <div className="question">
               {index + 1}. {question.text}
+              <div className="hostControls">
+                <button onClick={() => speak({ text: question.text })}></button>
+                <button onClick={() => removeQuestion(question.id)}>x</button>
+              </div>
               <span className="votecount">{question.votes} votes</span>
             </div>
           );
