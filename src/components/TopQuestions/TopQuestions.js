@@ -3,6 +3,9 @@ import "./TopQuestions.css";
 import "firebase/firestore";
 import { useSpeechSynthesis } from "react-speech-kit";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTimes, faVolumeUp } from "@fortawesome/free-solid-svg-icons";
+
 function TopQuestions(props) {
   let time = new Date();
   let db = props.db;
@@ -41,8 +44,7 @@ function TopQuestions(props) {
         break;
       }
     }
-    // eslint-disable-next-line
-  }, [topQuestions]);
+  }, [db, lastSpeech, speak, time, topQuestions]);
 
   function removeQuestion(id) {
     if (db) {
@@ -59,8 +61,30 @@ function TopQuestions(props) {
             <div className="question">
               {index + 1}. {question.text}
               <div className="hostControls">
-                <button onClick={() => speak({ text: question.text })}></button>
-                <button onClick={() => removeQuestion(question.id)}>x</button>
+                <button
+                  onClick={() => speak({ text: question.text })}
+                  className="hostButton"
+                >
+                  <i>
+                    <FontAwesomeIcon
+                      icon={faVolumeUp}
+                      className="hostIcon"
+                      color="#25D959"
+                    />
+                  </i>
+                </button>
+                <button
+                  onClick={() => removeQuestion(question.id)}
+                  className="hostButton"
+                >
+                  <i>
+                    <FontAwesomeIcon
+                      icon={faTimes}
+                      className="hostIcon"
+                      color="#B32323"
+                    />
+                  </i>
+                </button>
               </div>
               <span className="votecount">{question.votes} votes</span>
             </div>

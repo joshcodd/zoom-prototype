@@ -31,5 +31,21 @@
 }
 
 .hostControls {
+  position: relative;
   float: right;
+
+  margin: 0;
+  padding: 0;
+  right: -10px;
+}
+
+.hostButton {
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  padding: 0px 5px;
+}
+
+.hostIcon {
+  font-size: 20px;
 }
