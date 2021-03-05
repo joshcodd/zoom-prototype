@@ -29,7 +29,7 @@ function QuestionMessage(props) {
 
   return (
     <li key={message.id} className="message">
-      <div>{"this is my name"}</div>
+      <div>{message.name}</div>
       <div className="text">{message.text}</div>
       <div className="arrows">
         {console.log(message)}
