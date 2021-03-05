@@ -4,7 +4,7 @@ import "../StudentApp/StudentApp";
 function App() {
   return (
     <div>
-      <StudentApp />
+      <StudentApp name="josh" />
     </div>
   );
 }

@@ -16,11 +16,11 @@ firebase.initializeApp({
 });
 const db = firebase.firestore();
 
-function StudentApp() {
+function StudentApp(props) {
   return (
     <div className="App">
       <Window />
-      <Chat db={db} />
+      <Chat db={db} startingChat="questions" name={props.name} />
       <TopQuestions db={db} />
       <ToolBar />
     </div>
