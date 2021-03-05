@@ -43,7 +43,7 @@ function QuestionMessage(props) {
       <div className="text">{message.text}</div>
       <div className="arrows">
         <button
-          className="up"
+          className="up button"
           onClick={() => handleVoteUp(message.id)}
           id={message.id}
         >
@@ -56,7 +56,7 @@ function QuestionMessage(props) {
           </i>
         </button>
         <button
-          className="up"
+          className="up button"
           onClick={() => handleVoteDown(message.id)}
           id={message.id}
         >

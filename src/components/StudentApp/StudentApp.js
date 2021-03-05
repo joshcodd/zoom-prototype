@@ -5,7 +5,7 @@ import Window from "../HostWindow/HostWindow";
 import firebase from "firebase/app";
 import "firebase/firestore";
 import TopQuestions from "../TopQuestions/TopQuestions";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 firebase.initializeApp({
   apiKey: "AIzaSyB_dcSrtNM1SoOdbpGK4gyDtfIJs8NQ1Mo",

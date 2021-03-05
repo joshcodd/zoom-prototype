@@ -55,14 +55,14 @@
   display: inline;
 }
 
-button {
+.button {
   background: transparent;
   border: none;
   padding: 2px;
   margin: 5px 0px 5px 0px;
 }
 
-button:hover {
+.button:hover {
   filter: brightness(200%);
 }
 

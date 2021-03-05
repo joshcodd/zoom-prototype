@@ -1,0 +1,36 @@
+.homeButton {
+  background-color: #1a1a1a;
+  color: white;
+  width: 300px;
+  height: 50px;
+  border-radius: 10px;
+  margin: 0 0 7px 0;
+  border: none;
+  font-size: 20px;
+}
+
+.homeButton:hover {
+  border: 1px solid #23da57;
+}
+
+.centreContainer {
+  margin: 20vh auto;
+  width: 300px;
+}
+
+.displayName {
+  width: 240px;
+  height: 50px;
+  border-radius: 10px;
+  font-size: 25px;
+  padding: 0 30px;
+  background-color: #1a1a1a;
+  border: 1px solid #23da57;
+  color: #23da57;
+}
+
+.label {
+  color: #b1b1b1;
+  float: left;
+  margin: 15px 0 5px 0;
+}

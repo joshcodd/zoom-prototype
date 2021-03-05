@@ -1,10 +1,11 @@
 import StudentApp from "../StudentApp/StudentApp";
 import "../StudentApp/StudentApp";
+import HomeScreen from "../HomeScreen/HomeScreen";
 
 function App() {
   return (
     <div>
-      <StudentApp name="josh" />
+      <HomeScreen />
     </div>
   );
 }
