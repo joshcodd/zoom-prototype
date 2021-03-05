@@ -20,8 +20,33 @@
 }
 
 .centre {
-  width: 430px;
+  width: 700px;
   height: auto;
   margin: 0 auto;
   position: relative;
+}
+
+.menuDialog {
+  position: absolute;
+  width: 585px;
+  top: -65px;
+  left: calc(50% - 290px);
+  height: 50px;
+}
+
+.settings {
+  width: 150px;
+  height: 65px;
+  background-color: #1b1b1b;
+  float: right;
+  border-radius: 10px;
+}
+
+.chatStateButton {
+  margin-top: 18px;
+  width: 100px;
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: #25d959;
 }

@@ -1,10 +1,25 @@
+import { useEffect, useState } from "react";
 import "./ToolBar.css";
 
 function ToolBar() {
+  const [showMenu, setShowMenu] = useState(false);
+
+  function handleMoreClick() {
+    setShowMenu(!showMenu);
+  }
+
   return (
     <div className="toolbar">
-      <img src="mute-4.png" className="icon left" alt="Alternative Text" />
+      <img src="mute.png" className="icon left" alt="Alternative Text" />
       <img src="video.png" className="icon left" alt="Alternative Text" />
+      <div
+        className="menuDialog centre"
+        style={{ visibility: showMenu ? "visible" : "hidden" }}
+      >
+        <div className="settings">
+          <button className="chatStateButton"> Turn chat on.</button>
+        </div>
+      </div>
 
       <button className="leaveButton">Leave</button>
 
@@ -14,6 +29,12 @@ function ToolBar() {
         <img src="screenshot.png" className="icon" alt="Alternative Text" />
         <img src="record.png" className="icon" alt="Alternative Text" />
         <img src="reactions.png" className="icon" alt="Alternative Text" />
+        <img
+          src="more.png"
+          className="icon"
+          alt="Alternative Text"
+          onClick={handleMoreClick}
+        />
       </div>
     </div>
   );
