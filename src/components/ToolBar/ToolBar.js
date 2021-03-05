@@ -22,8 +22,7 @@ function ToolBar(props) {
       >
         <div className="settings">
           <button className="chatStateButton" onClick={handleChatHideClick}>
-            {" "}
-            Turn chat on.
+            Turn chat {props.hideChat ? "on" : "off"}.
           </button>
         </div>
       </div>

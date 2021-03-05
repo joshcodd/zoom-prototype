@@ -94,6 +94,7 @@ function Chat(props) {
           text: input,
           votes: 0,
           name: name,
+          read: false,
         });
       } else {
         db.collection("general").add({
