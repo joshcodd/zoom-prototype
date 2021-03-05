@@ -12,6 +12,10 @@ function ToolBar(props) {
     props.setHideChat(!props.hideChat);
   }
 
+  function handleLeaveClick() {
+    props.setHome(true);
+  }
+
   return (
     <div className="toolbar">
       <img src="mute.png" className="icon left" alt="Alternative Text" />
@@ -27,7 +31,9 @@ function ToolBar(props) {
         </div>
       </div>
 
-      <button className="leaveButton">Leave</button>
+      <button className="leaveButton" onClick={handleLeaveClick}>
+        Leave
+      </button>
 
       <div className="centre">
         <img src="participants.png" className="icon" alt="Alternative Text" />

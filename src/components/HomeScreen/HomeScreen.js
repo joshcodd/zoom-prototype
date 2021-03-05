@@ -44,7 +44,7 @@ function HomeScreen(props) {
         </div>
       )}
 
-      {!home && <StudentApp name={name} view={view} />}
+      {!home && <StudentApp name={name} view={view} setHome={setHome} />}
     </div>
   );
 }

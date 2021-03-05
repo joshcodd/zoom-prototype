@@ -30,7 +30,11 @@ function StudentApp(props) {
         hideChat={hideChat}
       />
       <TopQuestions db={db} />
-      <ToolBar hideChat={hideChat} setHideChat={setHideChat} />
+      <ToolBar
+        hideChat={hideChat}
+        setHideChat={setHideChat}
+        setHome={props.setHome}
+      />
     </div>
   );
 }
