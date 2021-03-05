@@ -17,6 +17,7 @@ firebase.initializeApp({
 const db = firebase.firestore();
 
 function StudentApp(props) {
+  const [hideChat, setHideChat];
   return (
     <div className="App">
       <Window />

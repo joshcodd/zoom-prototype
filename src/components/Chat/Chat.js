@@ -10,12 +10,13 @@ function Chat(props) {
   let [input, setInput] = useState("");
   let [messages, setMessages] = useState([]);
   let [chatState, setChatState] = useState(props.startingChat);
-  let name = props.name;
+  let [name, setName] = useState(props.name);
 
   useEffect(() => {
     let selectedButton = document.getElementById(chatState).style;
     selectedButton.backgroundColor = "white";
     selectedButton.color = "black";
+    setName(props.name);
   }, [chatState]);
 
   useEffect(() => {
@@ -48,7 +49,15 @@ function Chat(props) {
     }
   }, [db, chatState]);
 
-  function toggleChat() {}
+  function handleAnonymousClick(event) {
+    let displayName;
+    if (event.target.value == props.name) {
+      displayName = "Anonymous";
+    } else {
+      displayName = props.name;
+    }
+    setName(displayName);
+  }
 
   function handleMessageChange(event) {
     let message = event.target.value;
@@ -117,7 +126,7 @@ function Chat(props) {
       <div className="inputArea">
         <textarea
           onChange={handleMessageChange}
-          placeholder="Type your message here"
+          placeholder="Type your message here..."
           className="input"
           name="inputArea"
           cols="48"
@@ -125,9 +134,23 @@ function Chat(props) {
           value={input}
         ></textarea>
 
-        <button className="sendButton" onClick={handleSubmit}>
-          Send
-        </button>
+        <div className="inputdialog">
+          <button className="sendButton" onClick={handleSubmit}>
+            Send
+          </button>
+          {chatState == "questions" && (
+            <div className="isAnonymous">
+              <input
+                className="checkbox"
+                type="checkbox"
+                id="anonymous"
+                value={name}
+                onClick={handleAnonymousClick}
+              />
+              <label>Post anonymously?</label>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

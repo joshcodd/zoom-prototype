@@ -26,8 +26,6 @@
 }
 
 .chat {
-  margin: 0vh 0 0 0;
-
   height: 100vh;
   width: 400px;
   background-color: #222222;
@@ -48,6 +46,19 @@
   background-color: #222222;
   color: white;
   border-color: #222222;
+  padding: 5px 0 15px 0;
+}
+
+.inputdialog {
+  float: left;
+  margin: 5px 0 2px 5px;
+  color: white;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.checkbox {
+  margin: 0 5px 0 20px;
 }
 
 .sendButton {
@@ -59,8 +70,6 @@
   color: white;
   font-size: 13px;
   font-weight: 500;
-  float: left;
-  margin: 5px 0 2px 10px;
 }
 
 .sendButton:hover {
@@ -105,11 +114,15 @@
   margin: 0;
 }
 
+.isAnonymous {
+  display: inline;
+}
+
 .messages {
   float: left;
   overflow-y: scroll;
   overflow-x: hidden;
   width: 400px;
   margin: 10px 0 0 0;
-  height: calc(100vh - 200px);
+  height: calc(100vh - 225px);
 }
