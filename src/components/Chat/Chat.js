@@ -31,7 +31,7 @@ function Chat(props) {
 
   useEffect(() => {
     if (db) {
-      if (chatState == "questions") {
+      if (chatState === "questions") {
         const unsub = db
           .collection("message")
           .orderBy("createdAt")
@@ -61,7 +61,7 @@ function Chat(props) {
 
   function handleAnonymousClick(event) {
     let displayName;
-    if (event.target.value == props.name) {
+    if (event.target.value === props.name) {
       displayName = "Anonymous";
     } else {
       displayName = props.name;
@@ -88,7 +88,7 @@ function Chat(props) {
 
   function handleSubmit() {
     if (db) {
-      if (chatState == "questions") {
+      if (chatState === "questions") {
         db.collection("message").add({
           createdAt: firebase.firestore.FieldValue.serverTimestamp(),
           text: input,
@@ -143,7 +143,7 @@ function Chat(props) {
       <div className="messages">
         <ul className="message-list">
           {messages.map((message) => {
-            if (chatState == "questions") {
+            if (chatState === "questions") {
               return <QuestionMessage message={message} db={db} />;
             } else {
               return <GeneralMessage message={message} />;
@@ -167,7 +167,7 @@ function Chat(props) {
           <button className="sendButton" onClick={handleSubmit}>
             Send
           </button>
-          {chatState == "questions" && (
+          {chatState === "questions" && (
             <div className="isAnonymous">
               <input
                 className="checkbox"

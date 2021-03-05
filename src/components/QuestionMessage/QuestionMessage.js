@@ -6,7 +6,6 @@ import {
   faArrowAltCircleUp,
   faArrowAltCircleDown,
 } from "@fortawesome/free-solid-svg-icons";
-import { useEffect, useState } from "react";
 
 function QuestionMessage(props) {
   const message = props.message;

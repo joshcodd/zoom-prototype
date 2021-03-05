@@ -41,6 +41,7 @@ function TopQuestions(props) {
         break;
       }
     }
+    // eslint-disable-next-line
   }, [topQuestions]);
 
   return (
@@ -54,6 +55,8 @@ function TopQuestions(props) {
               <span className="votecount">{question.votes} votes</span>
             </div>
           );
+        } else {
+          return null;
         }
       })}
     </div>
