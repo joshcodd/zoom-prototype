@@ -88,6 +88,16 @@
   height: 30px;
 }
 
+.singleButton {
+  border-radius: 50px;
+  width: 105px;
+  height: 30px;
+  border: 1px solid white;
+  background-color: #222222;
+  color: white;
+  font-size: 17px;
+}
+
 .rightButton {
   border: 1px solid white;
   background-color: #222222;

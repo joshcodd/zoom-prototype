@@ -21,7 +21,6 @@ function QuestionMessage(props) {
     timestamp = `${hoursZero}${date.getHours()}:${minutesZero}${date.getMinutes()} ${date.toDateString()}`;
   }
 
-  console.log(message);
   function handleVoteUp(id) {
     if (db) {
       db.collection("message")

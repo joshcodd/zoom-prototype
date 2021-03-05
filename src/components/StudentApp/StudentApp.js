@@ -5,6 +5,7 @@ import Window from "../HostWindow/HostWindow";
 import firebase from "firebase/app";
 import "firebase/firestore";
 import TopQuestions from "../TopQuestions/TopQuestions";
+import { useEffect, useState } from "react";
 
 firebase.initializeApp({
   apiKey: "AIzaSyB_dcSrtNM1SoOdbpGK4gyDtfIJs8NQ1Mo",
@@ -17,13 +18,19 @@ firebase.initializeApp({
 const db = firebase.firestore();
 
 function StudentApp(props) {
-  const [hideChat, setHideChat];
+  const [hideChat, setHideChat] = useState(false);
+
   return (
     <div className="App">
       <Window />
-      <Chat db={db} startingChat="questions" name={props.name} />
+      <Chat
+        db={db}
+        startingChat="questions"
+        name={props.name}
+        hideChat={hideChat}
+      />
       <TopQuestions db={db} />
-      <ToolBar />
+      <ToolBar hideChat={hideChat} setHideChat={setHideChat} />
     </div>
   );
 }

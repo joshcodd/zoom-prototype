@@ -1,11 +1,15 @@
 import { useEffect, useState } from "react";
 import "./ToolBar.css";
 
-function ToolBar() {
+function ToolBar(props) {
   const [showMenu, setShowMenu] = useState(false);
 
   function handleMoreClick() {
     setShowMenu(!showMenu);
+  }
+
+  function handleChatHideClick() {
+    props.setHideChat(!props.hideChat);
   }
 
   return (
@@ -17,7 +21,10 @@ function ToolBar() {
         style={{ visibility: showMenu ? "visible" : "hidden" }}
       >
         <div className="settings">
-          <button className="chatStateButton"> Turn chat on.</button>
+          <button className="chatStateButton" onClick={handleChatHideClick}>
+            {" "}
+            Turn chat on.
+          </button>
         </div>
       </div>
 

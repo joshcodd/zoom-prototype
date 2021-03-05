@@ -13,11 +13,21 @@ function Chat(props) {
   let [name, setName] = useState(props.name);
 
   useEffect(() => {
-    let selectedButton = document.getElementById(chatState).style;
-    selectedButton.backgroundColor = "white";
-    selectedButton.color = "black";
-    setName(props.name);
-  }, [chatState]);
+    let selectedButton;
+    if (!props.hideChat) {
+      selectedButton = chatState;
+    } else {
+      selectedButton = "questions";
+    }
+    setActiveColours(selectedButton);
+  }, [chatState, props.hideChat]);
+
+  useEffect(() => {
+    if (!props.hideChat) {
+      removeActiveColours("general");
+    }
+    setChatState("questions");
+  }, [props.hideChat]);
 
   useEffect(() => {
     if (db) {
@@ -64,6 +74,18 @@ function Chat(props) {
     setInput(message);
   }
 
+  function setActiveColours(id) {
+    const selectedButton = document.getElementById(id).style;
+    selectedButton.backgroundColor = "white";
+    selectedButton.color = "black";
+  }
+
+  function removeActiveColours(id) {
+    const prevButton = document.getElementById(id).style;
+    prevButton.backgroundColor = "#161616";
+    prevButton.color = "white";
+  }
+
   function handleSubmit() {
     if (db) {
       if (chatState == "questions") {
@@ -86,30 +108,36 @@ function Chat(props) {
 
   function handleChatChange(state) {
     const prevState = chatState;
-    const prevButton = document.getElementById(prevState).style;
-    prevButton.backgroundColor = "#161616";
-    prevButton.color = "white";
+    removeActiveColours(prevState);
     setChatState(state);
   }
 
   return (
     <div className="chat">
-      <div className="splitButton">
-        <button
-          className="leftButton"
-          id="general"
-          onClick={() => handleChatChange("general")}
-        >
-          General
-        </button>
-        <button
-          className="rightButton"
-          id="questions"
-          onClick={() => handleChatChange("questions")}
-        >
-          Questions
-        </button>
-      </div>
+      {props.hideChat ? (
+        <div className="splitButton">
+          <button id="questions" className="singleButton">
+            Questions
+          </button>
+        </div>
+      ) : (
+        <div className="splitButton">
+          <button
+            className="leftButton"
+            id="general"
+            onClick={() => handleChatChange("general")}
+          >
+            General
+          </button>
+          <button
+            className="rightButton"
+            id="questions"
+            onClick={() => handleChatChange("questions")}
+          >
+            Questions
+          </button>
+        </div>
+      )}
 
       <div className="messages">
         <ul className="message-list">
