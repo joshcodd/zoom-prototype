@@ -30,7 +30,6 @@ function TopQuestions(props) {
         .slice(topQuestions.length - numOfQuestions)
         .reverse()
         .map((question, index) => {
-          console.log(topQuestions);
           if (question.votes > 0) {
             return (
               <div className="question">

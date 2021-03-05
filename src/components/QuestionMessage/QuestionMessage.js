@@ -6,11 +6,22 @@ import {
   faArrowAltCircleUp,
   faArrowAltCircleDown,
 } from "@fortawesome/free-solid-svg-icons";
+import { useEffect, useState } from "react";
 
 function QuestionMessage(props) {
   const message = props.message;
   const db = props.db;
+  let timestamp;
 
+  let date = message.createdAt;
+  if (date !== null) {
+    date = date.toDate();
+    const hoursZero = date.getHours() > 9 ? "" : "0";
+    const minutesZero = date.getMinutes() > 9 ? "" : "0";
+    timestamp = `${hoursZero}${date.getHours()}:${minutesZero}${date.getMinutes()} ${date.toDateString()}`;
+  }
+
+  console.log(message);
   function handleVoteUp(id) {
     if (db) {
       db.collection("message")
@@ -30,9 +41,9 @@ function QuestionMessage(props) {
   return (
     <li key={message.id} className="message">
       <div>{message.name}</div>
+      <div>{timestamp}</div>
       <div className="text">{message.text}</div>
       <div className="arrows">
-        {console.log(message)}
         <button
           className="up"
           onClick={() => handleVoteUp(message.id)}

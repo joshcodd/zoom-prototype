@@ -14,9 +14,21 @@
   font-size: 11px;
   color: var(--main-text-color);
   opacity: 0.9;
-  margin-bottom: 2px;
+  margin: -5px 0 2px 0;
+  float: left;
 }
+
 .message div:nth-child(2) {
+  font-size: 11px;
+  color: var(--main-text-color);
+  opacity: 0.9;
+  margin-bottom: 2px;
+  margin-top: -5px;
+  float: right;
+}
+
+.message div:nth-child(3) {
+  margin-top: 5px;
   background-color: var(--main-color);
   color: var(--secondary-color);
 }
@@ -29,7 +41,7 @@
 
 .arrows {
   position: absolute;
-  top: calc(50% - 19px);
+  top: calc(60% - 19px);
   right: 0;
   height: 37px;
   margin-right: 35px;
@@ -39,7 +51,7 @@
 .votes {
   position: absolute;
   margin: 5px 10px 10px 5px;
-  color: #25d959;
+  color: #25d959 !important;
   display: inline;
 }
 

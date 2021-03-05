@@ -1,4 +1,4 @@
-.message {
+.generalmessage {
   background-color: #161616;
   margin: 20px;
   list-style: none;
@@ -10,15 +10,27 @@
   position: relative;
 }
 
-.message div:nth-child(1) {
+.generalmessage div:nth-child(1) {
   font-size: 11px;
   color: var(--main-text-color);
   opacity: 0.9;
   margin-bottom: 2px;
+  float: left;
 }
-.message div:nth-child(2) {
+
+.generalmessage div:nth-child(2) {
+  font-size: 11px;
+  color: var(--main-text-color);
+  opacity: 0.9;
+  margin-bottom: 2px;
+  float: right;
+}
+
+.generalmessage div:nth-child(3) {
   background-color: var(--main-color);
   color: var(--secondary-color);
+  display: block;
+  clear: both;
 }
 
 .text {
