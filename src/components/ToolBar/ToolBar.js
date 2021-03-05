@@ -3,6 +3,8 @@ import "./ToolBar.css";
 
 function ToolBar(props) {
   const [showMenu, setShowMenu] = useState(false);
+  let view = props.view;
+  let dictateAt = props.dictateAt;
 
   function handleMoreClick() {
     setShowMenu(!showMenu);
@@ -16,20 +18,47 @@ function ToolBar(props) {
     props.setHome(true);
   }
 
+  function handleSpeechNumber(event) {
+    props.setDictateAt(event.target.value);
+  }
+
   return (
     <div className="toolbar">
       <img src="mute.png" className="icon left" alt="Alternative Text" />
       <img src="video.png" className="icon left" alt="Alternative Text" />
-      <div
-        className="menuDialog centre"
-        style={{ visibility: showMenu ? "visible" : "hidden" }}
-      >
-        <div className="settings">
-          <button className="chatStateButton" onClick={handleChatHideClick}>
-            Turn chat {props.hideChat ? "on" : "off"}.
-          </button>
+
+      {view === "student" && (
+        <div
+          className="menuDialog centre"
+          style={{ visibility: showMenu ? "visible" : "hidden" }}
+        >
+          <div className="settings">
+            <button className="chatStateButton" onClick={handleChatHideClick}>
+              Turn chat {props.hideChat ? "on" : "off"}.
+            </button>
+          </div>
         </div>
-      </div>
+      )}
+
+      {view === "host" && (
+        <div
+          className="hostMenuDialog centre"
+          style={{ visibility: showMenu ? "visible" : "hidden" }}
+        >
+          <div className="hostSettings">
+            <label className="dictateLabel">Dictate question at:</label>
+            <input
+              type="range"
+              className="slider"
+              onChange={handleSpeechNumber}
+              min="0"
+              max="100"
+              value={dictateAt}
+            ></input>
+            <label className="votesLabel">{dictateAt} votes</label>
+          </div>
+        </div>
+      )}
 
       <button className="leaveButton" onClick={handleLeaveClick}>
         Leave

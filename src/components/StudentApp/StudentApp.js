@@ -19,6 +19,7 @@ const db = firebase.firestore();
 
 function StudentApp(props) {
   const [hideChat, setHideChat] = useState(false);
+  const [dictateAt, setDictateAt] = useState(10);
 
   return (
     <div className="App">
@@ -29,11 +30,14 @@ function StudentApp(props) {
         name={props.name}
         hideChat={hideChat}
       />
-      <TopQuestions db={db} />
+      <TopQuestions db={db} view={props.view} dictateAt={dictateAt} />
       <ToolBar
         hideChat={hideChat}
         setHideChat={setHideChat}
         setHome={props.setHome}
+        view={props.view}
+        dictateAt={dictateAt}
+        setDictateAt={setDictateAt}
       />
     </div>
   );

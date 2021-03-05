@@ -42,6 +42,39 @@
   border-radius: 10px;
 }
 
+.hostMenuDialog {
+  position: absolute;
+  width: 620px;
+  top: -90px;
+  left: calc(50% - 310px);
+  height: 50px;
+}
+
+.hostSettings {
+  width: 200px;
+  height: 90px;
+  background-color: #1b1b1b;
+  float: right;
+  border-radius: 10px;
+}
+
+.slider {
+  width: 150px;
+  display: block;
+  margin: 35px auto 5px auto;
+}
+
+.votesLabel {
+  color: #25d959;
+}
+
+.dictateLabel {
+  color: #b1b1b1;
+  font-size: 15px;
+  float: left;
+  padding: 10px 0 0 10px;
+}
+
 .chatStateButton {
   margin-top: 18px;
   width: 100px;
