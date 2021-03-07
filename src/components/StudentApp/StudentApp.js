@@ -25,7 +25,7 @@ function StudentApp(props) {
   return (
     <div className="App">
       <Window />
-      <Gallery />
+      <Gallery name={props.name} view={props.view} />
       <Chat
         db={db}
         startingChat="questions"

@@ -9,22 +9,23 @@
   overflow: hidden;
 }
 
-.topArrow {
+.arrow:hover {
+  background-color: #a9a9a9;
+  color: #222222;
+}
+
+.arrow {
   width: calc(16vw);
   height: 25px;
   background-color: #161616;
   font-size: 18px;
   line-height: 25px;
+  color: #a9a9a9;
 }
 
 .bottomArrow {
   position: absolute;
-  width: calc(16vw);
-  height: 25px;
-  background-color: #161616;
   bottom: 0;
-  font-size: 18px;
-  line-height: 25px;
 }
 
 .user {
@@ -33,4 +34,7 @@
   height: 125px;
   margin: 10px 0.25vw;
   border-radius: 5px;
+  line-height: 125px;
+  font-size: 20px;
+  color: #a9a9a9;
 }
