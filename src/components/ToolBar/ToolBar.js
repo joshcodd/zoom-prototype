@@ -24,8 +24,16 @@ function ToolBar(props) {
 
   return (
     <div className="toolbar">
-      <img src="mute.png" className="icon left" alt="Alternative Text" />
-      <img src="video.png" className="icon left" alt="Alternative Text" />
+      <img
+        src={process.env.PUBLIC_URL + "/mute.png"}
+        className="icon left"
+        alt="Alternative Text"
+      />
+      <img
+        src={process.env.PUBLIC_URL + "/video.png"}
+        className="icon left"
+        alt="Alternative Text"
+      />
 
       {view === "student" && (
         <div
@@ -65,13 +73,33 @@ function ToolBar(props) {
       </button>
 
       <div className="centre">
-        <img src="participants.png" className="icon" alt="Alternative Text" />
-        <img src="chat.png" className="icon" alt="Alternative Text" />
-        <img src="screenshot.png" className="icon" alt="Alternative Text" />
-        <img src="record.png" className="icon" alt="Alternative Text" />
-        <img src="reactions.png" className="icon" alt="Alternative Text" />
         <img
-          src="more.png"
+          src={process.env.PUBLIC_URL + "/participants.png"}
+          className="icon"
+          alt="Alternative Text"
+        />
+        <img
+          src={process.env.PUBLIC_URL + "/chat.png"}
+          className="icon"
+          alt="Alternative Text"
+        />
+        <img
+          src={process.env.PUBLIC_URL + "/screenshot.png"}
+          className="icon"
+          alt="Alternative Text"
+        />
+        <img
+          src={process.env.PUBLIC_URL + "/record.png"}
+          className="icon"
+          alt="Alternative Text"
+        />
+        <img
+          src={process.env.PUBLIC_URL + "/reactions.png"}
+          className="icon"
+          alt="Alternative Text"
+        />
+        <img
+          src={process.env.PUBLIC_URL + "/more.png"}
           className="icon"
           alt="Alternative Text"
           onClick={handleMoreClick}
