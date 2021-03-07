@@ -6,6 +6,7 @@ import firebase from "firebase/app";
 import "firebase/firestore";
 import TopQuestions from "../TopQuestions/TopQuestions";
 import { useState } from "react";
+import Gallery from "../Gallery/Gallery";
 
 firebase.initializeApp({
   apiKey: "AIzaSyB_dcSrtNM1SoOdbpGK4gyDtfIJs8NQ1Mo",
@@ -24,6 +25,7 @@ function StudentApp(props) {
   return (
     <div className="App">
       <Window />
+      <Gallery />
       <Chat
         db={db}
         startingChat="questions"

@@ -1,7 +1,7 @@
 .screen {
   display: flex;
   left: 0;
-  width: 55vw;
+  width: calc(83vw - 400px);
   height: 65vh;
 }
 

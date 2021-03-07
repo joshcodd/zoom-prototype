@@ -1,0 +1,36 @@
+.gallerycontainer {
+  position: fixed;
+  background-color: #222222;
+  height: 400px;
+  top: 0;
+  height: 65vh;
+  width: calc(16vw);
+  margin: 0 0px 0 calc(83.5vw - 400px);
+  overflow: hidden;
+}
+
+.topArrow {
+  width: calc(16vw);
+  height: 25px;
+  background-color: #161616;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.bottomArrow {
+  position: absolute;
+  width: calc(16vw);
+  height: 25px;
+  background-color: #161616;
+  bottom: 0;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.user {
+  background-color: #2e2e2e;
+  width: calc(15.5vw);
+  height: 125px;
+  margin: 10px 0.25vw;
+  border-radius: 5px;
+}
