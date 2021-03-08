@@ -119,4 +119,5 @@
   margin: 10px 0 0 0;
   height: calc(100vh - 220px);
   scroll-behavior: smooth;
+  scrollbar-color: var(--dark-colour) transparent;
 }
