@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/zoom-prototype/static/css/main.19ae1149.chunk.css",
-    "main.js": "/zoom-prototype/static/js/main.06276d9d.chunk.js",
-    "main.js.map": "/zoom-prototype/static/js/main.06276d9d.chunk.js.map",
+    "main.css": "/zoom-prototype/static/css/main.89f0eefc.chunk.css",
+    "main.js": "/zoom-prototype/static/js/main.ae059fb3.chunk.js",
+    "main.js.map": "/zoom-prototype/static/js/main.ae059fb3.chunk.js.map",
     "runtime-main.js": "/zoom-prototype/static/js/runtime-main.18d63fed.js",
     "runtime-main.js.map": "/zoom-prototype/static/js/runtime-main.18d63fed.js.map",
     "static/js/2.6be02937.chunk.js": "/zoom-prototype/static/js/2.6be02937.chunk.js",
     "static/js/2.6be02937.chunk.js.map": "/zoom-prototype/static/js/2.6be02937.chunk.js.map",
     "index.html": "/zoom-prototype/index.html",
-    "static/css/main.19ae1149.chunk.css.map": "/zoom-prototype/static/css/main.19ae1149.chunk.css.map",
+    "static/css/main.89f0eefc.chunk.css.map": "/zoom-prototype/static/css/main.89f0eefc.chunk.css.map",
     "static/js/2.6be02937.chunk.js.LICENSE.txt": "/zoom-prototype/static/js/2.6be02937.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.18d63fed.js",
     "static/js/2.6be02937.chunk.js",
-    "static/css/main.19ae1149.chunk.css",
-    "static/js/main.06276d9d.chunk.js"
+    "static/css/main.89f0eefc.chunk.css",
+    "static/js/main.ae059fb3.chunk.js"
   ]
 }
