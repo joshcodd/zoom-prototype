@@ -59,6 +59,13 @@ function Chat(props) {
     }
   }, [db, chatState]);
 
+  useEffect(() => {
+    setTimeout(() => {
+      let scrollDown = document.getElementById("messages");
+      scrollDown.scrollTop = scrollDown.scrollHeight;
+    }, 250);
+  }, [messages]);
+
   function handleAnonymousClick(event) {
     let displayName;
     if (event.target.value === props.name) {
@@ -140,7 +147,7 @@ function Chat(props) {
         </div>
       )}
 
-      <div className="messages">
+      <div className="messages" id="messages">
         <ul className="message-list">
           {messages.map((message) => {
             if (chatState === "questions") {
