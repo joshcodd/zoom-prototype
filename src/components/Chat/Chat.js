@@ -158,7 +158,7 @@ function Chat(props) {
           placeholder="Type your message here..."
           className="input"
           name="inputArea"
-          cols="48"
+          cols="42"
           rows="2"
           value={input}
         ></textarea>
