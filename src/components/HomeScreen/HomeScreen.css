@@ -10,7 +10,7 @@
 }
 
 .homeButton:hover {
-  border: 1px solid #23da57;
+  border: 1px solid var(--green);
 }
 
 .centreContainer {
@@ -25,12 +25,12 @@
   font-size: 25px;
   padding: 0 30px;
   background-color: #1a1a1a;
-  border: 1px solid #23da57;
-  color: #23da57;
+  border: 1px solid var(--green);
+  color: var(--green);
 }
 
 .label {
-  color: #b1b1b1;
+  color: var(--grey);
   float: left;
   margin: 15px 0 5px 0;
 }

@@ -65,11 +65,11 @@
 }
 
 .votesLabel {
-  color: #25d959;
+  color: var(--green);
 }
 
 .dictateLabel {
-  color: #b1b1b1;
+  color: var(--grey);
   font-size: 15px;
   float: left;
   padding: 10px 0 0 10px;
@@ -81,7 +81,7 @@
   height: 30px;
   border: 1px solid black;
   border-radius: 5px;
-  background-color: #25d959;
+  background-color: var(--green);
 }
 
 .leaveButton {

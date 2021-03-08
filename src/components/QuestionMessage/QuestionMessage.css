@@ -51,7 +51,7 @@
 .votes {
   position: absolute;
   margin: 5px 10px 10px 5px;
-  color: #25d959 !important;
+  color: var(--green) !important;
   display: inline;
 }
 
