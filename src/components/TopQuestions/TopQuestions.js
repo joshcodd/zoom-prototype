@@ -66,36 +66,41 @@ function TopQuestions(props) {
         if (question.votes > 0) {
           return (
             <div className="question">
-              {index + 1}. {question.text}
-              {view === "host" && (
-                <div className="hostControls">
-                  <button
-                    onClick={() => speak({ text: question.text })}
-                    className="hostButton"
-                  >
-                    <i>
-                      <FontAwesomeIcon
-                        icon={faVolumeUp}
-                        className="hostIcon"
-                        color="#25D959"
-                      />
-                    </i>
-                  </button>
-                  <button
-                    onClick={() => removeQuestion(question.id)}
-                    className="hostButton"
-                  >
-                    <i>
-                      <FontAwesomeIcon
-                        icon={faTimes}
-                        className="hostIcon"
-                        color="#B32323"
-                      />
-                    </i>
-                  </button>
-                </div>
-              )}
-              <span className="votecount">{question.votes} votes</span>
+              <div className="questionText">
+                {index + 1}. {question.text}
+              </div>
+
+              <div className="rightContainer">
+                {question.votes} votes
+                {view === "host" && (
+                  <div className="hostControls">
+                    <button
+                      onClick={() => speak({ text: question.text })}
+                      className="hostButton"
+                    >
+                      <i>
+                        <FontAwesomeIcon
+                          icon={faVolumeUp}
+                          className="hostIcon"
+                          color="#25D959"
+                        />
+                      </i>
+                    </button>
+                    <button
+                      onClick={() => removeQuestion(question.id)}
+                      className="hostButton"
+                    >
+                      <i>
+                        <FontAwesomeIcon
+                          icon={faTimes}
+                          className="hostIcon"
+                          color="#B32323"
+                        />
+                      </i>
+                    </button>
+                  </div>
+                )}
+              </div>
             </div>
           );
         } else {

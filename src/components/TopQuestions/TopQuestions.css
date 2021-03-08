@@ -1,51 +1,60 @@
 .container {
-  margin: 10px 0px 10px 10px;
+  position: fixed;
+  margin: 10px 0px 60px 10px;
   text-align: left;
   width: calc(100vw - 425px);
   border: 2px solid #222222;
   border-radius: 10px;
   background-color: #222222;
+  bottom: 0;
+  overflow: scroll;
+  height: 175px;
+  font-size: 18px;
 }
 
 .question {
-  padding: 0px 15px;
-  margin: 3px 3px;
+  position: relative;
+  padding: 9px 15px;
+  margin: 5px 5px;
   background-color: #161616;
-  text-align: left;
-  font-size: 20px;
+  font-size: 18px;
   color: white;
   border-radius: 5px;
-  height: calc((35vh - 140px) / 3);
-  line-height: calc((35vh - 140px) / 3);
 }
 
 .title {
   text-align: left;
-  font-size: 25px;
+  font-size: 22px;
   color: white;
-  padding: 7px 10px;
-}
-
-.votecount {
-  float: right;
+  padding: 7px 10px 4px 10px;
 }
 
 .hostControls {
-  position: relative;
-  float: right;
-
-  margin: 0;
-  padding: 0;
-  right: -10px;
+  padding-left: 7px;
 }
 
 .hostButton {
   background-color: transparent;
   border: none;
-  margin: 0;
-  padding: 0px 5px;
+  padding: 0px 0px;
+  margin: 3px 0px 0px 7px;
 }
 
 .hostIcon {
-  font-size: 20px;
+  font-size: 18px;
+}
+
+.questionText {
+  width: calc(100vw - 630px);
+  word-wrap: break-word;
+}
+
+.rightContainer {
+  display: flex;
+  position: absolute;
+  right: 0;
+  top: 0%;
+  align-items: center;
+  height: 100%;
+  margin-right: 15px;
 }

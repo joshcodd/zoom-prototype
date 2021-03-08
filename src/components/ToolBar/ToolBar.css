@@ -83,3 +83,16 @@
   border-radius: 5px;
   background-color: #25d959;
 }
+
+.leaveButton {
+  border: 0px;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  margin: 11.5px 15px 11.5px 0px;
+  float: right;
+  width: 70px;
+  height: 27px;
+  border-radius: 8px;
+  background-color: #b32323;
+}
