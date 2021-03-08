@@ -3,9 +3,13 @@
   background-color: var(--light-colour);
   height: 400px;
   top: 0;
-  height: 65vh;
-  width: calc(16vw);
-  margin: 0 0px 0 calc(83.5vw - 400px);
+  height: calc(100vh - 252px);
+  /* width: calc(16vw); */
+  width: 225px;
+
+  /* margin: 0 0px 0 calc(83.5vw - 400px); */
+  right: 410px;
+
   overflow: hidden;
 }
 
@@ -15,7 +19,7 @@
 }
 
 .arrow {
-  width: calc(16vw);
+  width: 225px;
   height: 25px;
   background-color: var(--dark-colour);
   font-size: 18px;
@@ -30,9 +34,9 @@
 
 .user {
   background-color: #2e2e2e;
-  width: calc(15.5vw);
+  width: 215px;
   height: 125px;
-  margin: 10px 0.25vw;
+  margin: 10px 5px;
   border-radius: 5px;
   line-height: 125px;
   font-size: 20px;
