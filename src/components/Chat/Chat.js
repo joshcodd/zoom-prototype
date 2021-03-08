@@ -76,14 +76,14 @@ function Chat(props) {
 
   function setActiveColours(id) {
     const selectedButton = document.getElementById(id).style;
-    selectedButton.backgroundColor = "white";
-    selectedButton.color = "black";
+    selectedButton.backgroundColor = "#e2e2e2";
+    selectedButton.color = "#222222";
   }
 
   function removeActiveColours(id) {
     const prevButton = document.getElementById(id).style;
-    prevButton.backgroundColor = "#161616";
-    prevButton.color = "white";
+    prevButton.backgroundColor = "#222222";
+    prevButton.color = "#e2e2e2";
   }
 
   function handleSubmit() {

@@ -6,7 +6,7 @@
 .chat {
   height: 100vh;
   width: 400px;
-  background-color: #222222;
+  background-color: var(--light-colour);
   position: absolute;
   top: 0;
   right: 0;
@@ -21,9 +21,9 @@
 }
 
 .input {
-  background-color: #222222;
-  color: white;
-  border-color: #222222;
+  background-color: var(--light-colour);
+  color: var(--white);
+  border-color: var(--light-colour);
   font-size: 13px;
   resize: none;
 }
@@ -35,7 +35,7 @@
 .inputdialog {
   float: left;
   margin: 10px 0 0 5px;
-  color: white;
+  color: var(--white);
   font-size: 13px;
   font-weight: 500;
 }
@@ -47,24 +47,24 @@
 .sendButton {
   width: 55px;
   height: 22px;
-  background-color: #222222;
-  border: 1px solid white;
+  background-color: var(--light-colour);
+  border: 1px solid var(--white);
   border-radius: 100px;
-  color: white;
+  color: var(--white);
   font-size: 13px;
   font-weight: 500;
 }
 
 .sendButton:hover {
-  background-color: white;
-  border: 1px solid white;
-  color: #222222;
+  background-color: var(--white);
+  border: 1px solid var(--white);
+  color: var(--light-colour);
 }
 
 .leftButton {
-  border: 1px solid white;
-  background-color: #222222;
-  color: white;
+  border: 1px solid var(--white);
+  background-color: var(--light-colour);
+  color: var(--white);
   border-radius: 50px 0 0 50px;
   font-size: 17px;
   width: 105px;
@@ -75,17 +75,17 @@
   border-radius: 50px;
   width: 105px;
   height: 30px;
-  border: 1px solid white;
-  background-color: #222222;
-  color: white;
+  border: 1px solid var(--white);
+  background-color: var(--light-colour);
+  color: var(--white);
   font-size: 17px;
 }
 
 .rightButton {
-  border: 1px solid white;
-  background-color: #222222;
+  border: 1px solid var(--white);
+  background-color: var(--light-colour);
   border-radius: 0 50px 50px 0;
-  color: white;
+  color: var(--white);
   font-size: 17px;
   width: 105px;
   height: 30px;
@@ -93,9 +93,9 @@
 
 .rightButton:hover,
 .leftButton:hover {
-  background-color: white;
-  border-color: white;
-  color: #222222;
+  background-color: var(--white);
+  border-color: var(--white);
+  color: var(--light-colour);
 }
 
 .splitButton {

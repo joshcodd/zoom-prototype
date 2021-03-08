@@ -1,6 +1,6 @@
 .gallerycontainer {
   position: fixed;
-  background-color: #222222;
+  background-color: var(--light-colour);
   height: 400px;
   top: 0;
   height: 65vh;
@@ -10,17 +10,17 @@
 }
 
 .arrow:hover {
-  background-color: #a9a9a9;
-  color: #222222;
+  background-color: var(--grey);
+  color: var(--light-colour);
 }
 
 .arrow {
   width: calc(16vw);
   height: 25px;
-  background-color: #161616;
+  background-color: var(--dark-colour);
   font-size: 18px;
   line-height: 25px;
-  color: #a9a9a9;
+  color: var(--grey);
 }
 
 .bottomArrow {
@@ -36,5 +36,5 @@
   border-radius: 5px;
   line-height: 125px;
   font-size: 20px;
-  color: #a9a9a9;
+  color: var(--grey);
 }
