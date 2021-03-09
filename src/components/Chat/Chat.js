@@ -63,7 +63,7 @@ function Chat(props) {
     setTimeout(() => {
       let scrollDown = document.getElementById("messages");
       scrollDown.scrollTop = scrollDown.scrollHeight;
-    }, 250);
+    }, 300);
   }, [messages]);
 
   function handleAnonymousClick(event) {
@@ -167,7 +167,6 @@ function Chat(props) {
           placeholder="Type your message here..."
           className="input"
           name="inputArea"
-          cols="42"
           rows="2"
           value={input}
         ></textarea>
