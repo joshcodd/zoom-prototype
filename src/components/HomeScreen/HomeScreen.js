@@ -1,7 +1,7 @@
 import "./HomeScreen.css";
 import { useState } from "react";
 
-import StudentApp from "../StudentApp/StudentApp";
+import Zoom from "../Zoom/Zoom";
 
 function HomeScreen() {
   const [name, setName] = useState("");
@@ -44,7 +44,7 @@ function HomeScreen() {
         </div>
       )}
 
-      {!home && <StudentApp name={name} view={view} setHome={setHome} />}
+      {!home && <Zoom name={name} view={view} setHome={setHome} />}
     </div>
   );
 }

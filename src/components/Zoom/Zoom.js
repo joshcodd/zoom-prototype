@@ -18,7 +18,7 @@ firebase.initializeApp({
 });
 const db = firebase.firestore();
 
-function StudentApp(props) {
+function Zoom(props) {
   const [hideChat, setHideChat] = useState(false);
   const [dictateAt, setDictateAt] = useState(10);
 
@@ -45,4 +45,4 @@ function StudentApp(props) {
   );
 }
 
-export default StudentApp;
+export default Zoom;

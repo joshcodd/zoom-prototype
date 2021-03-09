@@ -1,4 +1,4 @@
-import "../StudentApp/StudentApp";
+import "../Zoom/Zoom";
 import HomeScreen from "../HomeScreen/HomeScreen";
 
 function App() {
