@@ -2,7 +2,7 @@
   position: fixed;
   margin: 10px 0px 60px 10px;
   text-align: left;
-  width: calc(100vw - 425px);
+  width: calc(100vw - 423px);
   border: 2px solid var(--light-colour);
   border-radius: 10px;
   background-color: var(--light-colour);
