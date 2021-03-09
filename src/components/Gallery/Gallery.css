@@ -4,12 +4,8 @@
   height: 400px;
   top: 0;
   height: calc(100vh - 252px);
-  /* width: calc(16vw); */
   width: 225px;
-
-  /* margin: 0 0px 0 calc(83.5vw - 400px); */
   right: 410px;
-
   overflow: hidden;
 }
 

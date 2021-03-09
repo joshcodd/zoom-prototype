@@ -91,13 +91,6 @@
   height: 30px;
 }
 
-.rightButton:hover,
-.leftButton:hover {
-  background-color: var(--white);
-  border-color: var(--white);
-  color: var(--light-colour);
-}
-
 .splitButton {
   margin: 20px 0 0 0;
 }
