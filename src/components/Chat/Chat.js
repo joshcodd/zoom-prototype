@@ -116,8 +116,10 @@ function Chat(props) {
 
   function handleChatChange(state) {
     const prevState = chatState;
-    removeActiveColours(prevState);
-    setChatState(state);
+    if (prevState !== state && prevState) {
+      removeActiveColours(prevState);
+      setChatState(state);
+    }
   }
 
   return (
