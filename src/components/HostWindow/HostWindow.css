@@ -1,14 +1,17 @@
 .screen {
-  position: relative;
-  display: inline;
+  position: absolute;
   max-height: 100%;
   max-width: 100%;
-
-  float: left;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 .window {
+  position: relative;
   width: calc(100vw - 645px);
-  height: calc(100vw - 750px);
+  height: calc(100vh - 252px);
   max-height: calc(100vh - 252px);
 }
