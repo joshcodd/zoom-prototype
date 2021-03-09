@@ -2,20 +2,20 @@ import { useState, useEffect } from "react";
 import "./TopQuestions.css";
 import "firebase/firestore";
 import { useSpeechSynthesis } from "react-speech-kit";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes, faVolumeUp } from "@fortawesome/free-solid-svg-icons";
 
 function TopQuestions(props) {
-  let time = new Date();
-  let db = props.db;
-  let [topQuestions, setTopQuestions] = useState([]);
+  const time = new Date();
+  const db = props.db;
+  const [topQuestions, setTopQuestions] = useState([]);
   const numOfQuestions = 3;
   const [lastSpeech, setLastSpeech] = useState(time.getTime() / 1000);
   const { speak } = useSpeechSynthesis();
-  let view = props.view;
-  let dictateAt = props.dictateAt;
+  const view = props.view;
+  const dictateAt = props.dictateAt;
   const questions = "questions";
+  const timeLimit = 10;
 
   useEffect(() => {
     if (db) {
@@ -36,11 +36,11 @@ function TopQuestions(props) {
 
   useEffect(() => {
     for (let i = 0; i < Math.min(numOfQuestions, topQuestions.length); i++) {
-      let question = topQuestions[i];
+      const question = topQuestions[i];
       const timeDiff = time.getTime() / 1000 - lastSpeech;
       if (
         question.votes > dictateAt &&
-        timeDiff > 10 &&
+        timeDiff > timeLimit &&
         question.read === false
       ) {
         speak({ text: question.text });
@@ -80,11 +80,7 @@ function TopQuestions(props) {
                       className="hostButton"
                     >
                       <i>
-                        <FontAwesomeIcon
-                          icon={faVolumeUp}
-                          className="hostIcon"
-                          color="#25D959"
-                        />
+                        <FontAwesomeIcon icon={faVolumeUp} color="#25D959" />
                       </i>
                     </button>
                     <button
@@ -92,11 +88,7 @@ function TopQuestions(props) {
                       className="hostButton"
                     >
                       <i>
-                        <FontAwesomeIcon
-                          icon={faTimes}
-                          className="hostIcon"
-                          color="#B32323"
-                        />
+                        <FontAwesomeIcon icon={faTimes} color="#B32323" />
                       </i>
                     </button>
                   </div>

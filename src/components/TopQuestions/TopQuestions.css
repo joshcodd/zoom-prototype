@@ -10,6 +10,7 @@
   overflow: scroll;
   height: 175px;
   font-size: 18px;
+  color: var(--white);
 }
 
 .container::-webkit-scrollbar {
@@ -23,15 +24,11 @@
   padding: 9px 15px;
   margin: 5px 5px;
   background-color: var(--dark-colour);
-  font-size: 18px;
-  color: var(--white);
   border-radius: 5px;
 }
 
 .title {
-  text-align: left;
   font-size: 22px;
-  color: var(--white);
   padding: 7px 10px 4px 10px;
 }
 
@@ -44,9 +41,6 @@
   border: none;
   padding: 0px 0px;
   margin: 3px 0px 0px 7px;
-}
-
-.hostIcon {
   font-size: 18px;
 }
 
@@ -59,7 +53,7 @@
   display: flex;
   position: absolute;
   right: 0;
-  top: 0%;
+  top: 0;
   align-items: center;
   height: 100%;
   margin-right: 15px;
