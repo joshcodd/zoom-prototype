@@ -15,11 +15,12 @@ function TopQuestions(props) {
   const { speak } = useSpeechSynthesis();
   let view = props.view;
   let dictateAt = props.dictateAt;
+  const questions = "questions";
 
   useEffect(() => {
     if (db) {
       const unsub = db
-        .collection("message")
+        .collection(questions)
         .orderBy("votes")
         .onSnapshot((querySnapshot) => {
           const data = querySnapshot.docs.map((doc) => ({
@@ -45,7 +46,7 @@ function TopQuestions(props) {
         speak({ text: question.text });
         setLastSpeech(time.getTime() / 1000);
         if (db) {
-          db.collection("message").doc(question.id).update({ read: true });
+          db.collection(questions).doc(question.id).update({ read: true });
         }
         break;
       }
@@ -55,7 +56,7 @@ function TopQuestions(props) {
 
   function removeQuestion(id) {
     if (db) {
-      db.collection("message").doc(id).delete();
+      db.collection(questions).doc(id).delete();
     }
   }
 

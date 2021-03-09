@@ -11,6 +11,7 @@ function QuestionMessage(props) {
   const message = props.message;
   const db = props.db;
   let timestamp;
+  const questions = "questions";
 
   let date = message.createdAt;
   if (date !== null) {
@@ -22,7 +23,7 @@ function QuestionMessage(props) {
 
   function handleVoteUp(id) {
     if (db) {
-      db.collection("message")
+      db.collection(questions)
         .doc(id)
         .update({ votes: firebase.firestore.FieldValue.increment(1) });
     }
@@ -30,7 +31,7 @@ function QuestionMessage(props) {
 
   function handleVoteDown(id) {
     if (db) {
-      db.collection("message")
+      db.collection(questions)
         .doc(id)
         .update({ votes: firebase.firestore.FieldValue.increment(-1) });
     }

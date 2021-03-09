@@ -11,29 +11,31 @@ function Chat(props) {
   let [messages, setMessages] = useState([]);
   let [chatState, setChatState] = useState(props.startingChat);
   let [name, setName] = useState(props.name);
+  const questions = "questions";
+  const general = "general";
 
   useEffect(() => {
     let selectedButton;
     if (!props.hideChat) {
       selectedButton = chatState;
     } else {
-      selectedButton = "questions";
+      selectedButton = questions;
     }
     setActiveColours(selectedButton);
   }, [chatState, props.hideChat]);
 
   useEffect(() => {
     if (!props.hideChat) {
-      removeActiveColours("general");
+      removeActiveColours(general);
     }
-    setChatState("questions");
+    setChatState(questions);
   }, [props.hideChat]);
 
   useEffect(() => {
     if (db) {
-      if (chatState === "questions") {
+      if (chatState === questions) {
         const unsub = db
-          .collection("message")
+          .collection(questions)
           .orderBy("createdAt")
           .onSnapshot((querySnapshot) => {
             const data = querySnapshot.docs.map((doc) => ({
@@ -45,7 +47,7 @@ function Chat(props) {
         return unsub;
       } else {
         const unsub = db
-          .collection("general")
+          .collection(general)
           .orderBy("createdAt")
           .onSnapshot((querySnapshot) => {
             const data = querySnapshot.docs.map((doc) => ({
@@ -95,8 +97,8 @@ function Chat(props) {
 
   function handleSubmit() {
     if (db) {
-      if (chatState === "questions") {
-        db.collection("message").add({
+      if (chatState === questions) {
+        db.collection(questions).add({
           createdAt: firebase.firestore.FieldValue.serverTimestamp(),
           text: input,
           votes: 0,
@@ -104,7 +106,7 @@ function Chat(props) {
           read: false,
         });
       } else {
-        db.collection("general").add({
+        db.collection(general).add({
           createdAt: firebase.firestore.FieldValue.serverTimestamp(),
           text: input,
           name: name,
@@ -135,14 +137,14 @@ function Chat(props) {
           <button
             className="leftButton"
             id="general"
-            onClick={() => handleChatChange("general")}
+            onClick={() => handleChatChange(general)}
           >
             General
           </button>
           <button
             className="rightButton"
             id="questions"
-            onClick={() => handleChatChange("questions")}
+            onClick={() => handleChatChange(questions)}
           >
             Questions
           </button>
@@ -152,7 +154,7 @@ function Chat(props) {
       <div className="messages" id="messages">
         <ul className="message-list">
           {messages.map((message) => {
-            if (chatState === "questions") {
+            if (chatState === questions) {
               return <QuestionMessage message={message} db={db} />;
             } else {
               return <GeneralMessage message={message} />;
