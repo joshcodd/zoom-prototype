@@ -8,15 +8,15 @@ function Gallery(props) {
   return (
     <div className="gallerycontainer">
       <div className="arrow">
-        <FontAwesomeIcon icon={faChevronDown} className="" />
+        <FontAwesomeIcon icon={faChevronDown} />
       </div>
-      <div className="user"> {view === "host" ? props.name : "Host"}</div>
-      <div className="user"> {view === "host" ? "Student" : props.name}</div>
+      <div className="user"> {view === "host" ? name : "Host"}</div>
+      <div className="user"> {view === "host" ? "Student" : name}</div>
       <div className="user">Student</div>
       <div className="user">Student</div>
       <div className="user">Student</div>
       <div className="arrow bottomArrow">
-        <FontAwesomeIcon icon={faChevronUp} className="" />
+        <FontAwesomeIcon icon={faChevronUp} />
       </div>
     </div>
   );
