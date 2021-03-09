@@ -3,7 +3,7 @@ import { useState } from "react";
 
 import StudentApp from "../StudentApp/StudentApp";
 
-function HomeScreen(props) {
+function HomeScreen() {
   const [name, setName] = useState("");
   const [home, setHome] = useState(true);
   const [view, setView] = useState("");
