@@ -2,7 +2,7 @@ import "./HostWindow.css";
 
 function HostWindow() {
   return (
-    <div className="window">
+    <div className="screenContainer">
       <img
         src={process.env.PUBLIC_URL + "/screen.png"}
         className="screen"

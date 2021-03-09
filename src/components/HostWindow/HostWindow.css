@@ -9,7 +9,7 @@
   margin: auto;
 }
 
-.window {
+.screenContainer {
   position: relative;
   width: calc(100vw - 645px);
   height: calc(100vh - 252px);
