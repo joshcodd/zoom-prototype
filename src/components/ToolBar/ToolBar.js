@@ -3,8 +3,8 @@ import "./ToolBar.css";
 
 function ToolBar(props) {
   const [showMenu, setShowMenu] = useState(false);
-  let view = props.view;
-  let dictateAt = props.dictateAt;
+  const view = props.view;
+  const dictateAt = props.dictateAt;
 
   function handleMoreClick() {
     setShowMenu(!showMenu);
