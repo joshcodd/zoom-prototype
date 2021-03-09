@@ -100,3 +100,40 @@
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
 }
+
+.message {
+  background-color: var(--dark-colour);
+  margin: 20px;
+  list-style: none;
+  border-radius: 10px;
+  padding: 10px;
+  min-height: 40px;
+  text-align: left;
+  display: block;
+  position: relative;
+}
+
+.text {
+  word-wrap: break-word;
+  width: 250px;
+  display: inline-block;
+}
+
+.message div:nth-child(1) {
+  font-size: 11px;
+  color: var(--message-name-colour);
+  opacity: 0.9;
+  float: left;
+}
+
+.message div:nth-child(2) {
+  font-size: 11px;
+  color: var(--message-name-colour);
+  opacity: 0.9;
+  float: right;
+}
+
+.message div:nth-child(3) {
+  background-color: var(--dark-colour);
+  color: var(--white);
+}

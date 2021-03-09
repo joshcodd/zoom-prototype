@@ -1,6 +1,5 @@
 import firebase from "firebase/app";
 import "./QuestionMessage.css";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faArrowAltCircleUp,
@@ -8,12 +7,12 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 function QuestionMessage(props) {
+  const questions = "questions";
   const message = props.message;
   const db = props.db;
   let timestamp;
-  const questions = "questions";
-
   let date = message.createdAt;
+
   if (date !== null) {
     date = date.toDate();
     const hoursZero = date.getHours() > 9 ? "" : "0";
@@ -38,13 +37,13 @@ function QuestionMessage(props) {
   }
 
   return (
-    <li key={message.id} className="message">
+    <li key={message.id} className="questionMessage message">
       <div>{message.name}</div>
       <div>{timestamp}</div>
       <div className="text">{message.text}</div>
       <div className="arrows">
         <button
-          className="up button"
+          className="up arrowButton"
           onClick={() => handleVoteUp(message.id)}
           id={message.id}
         >
@@ -57,7 +56,7 @@ function QuestionMessage(props) {
           </i>
         </button>
         <button
-          className="up button"
+          className="up arrowButton"
           onClick={() => handleVoteDown(message.id)}
           id={message.id}
         >

@@ -12,7 +12,7 @@ function GeneralMessage(props) {
     timestamp = `${hoursZero}${date.getHours()}:${minutesZero}${date.getMinutes()} ${date.toDateString()}`;
   }
   return (
-    <li key={message.id} className="generalmessage">
+    <li key={message.id} className="generalmessage message">
       <div>{message.name}</div>
       <div> {timestamp}</div>
       <div className="text">{message.text}</div>

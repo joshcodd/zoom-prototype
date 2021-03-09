@@ -1,40 +1,12 @@
-.generalmessage {
-  background-color: var(--dark-colour);
-  margin: 20px;
-  list-style: none;
-  border-radius: 10px;
-  padding: 10px;
-  min-height: 40px;
-  text-align: left;
-  display: block;
-  position: relative;
-}
-
 .generalmessage div:nth-child(1) {
-  font-size: 11px;
-  color: var(--message-name-colour);
-  opacity: 0.9;
   margin-bottom: 2px;
-  float: left;
 }
 
 .generalmessage div:nth-child(2) {
-  font-size: 11px;
-  color: var(--message-name-colour);
-  opacity: 0.9;
   margin-bottom: 2px;
-  float: right;
 }
 
 .generalmessage div:nth-child(3) {
-  background-color: var(--dark-colour);
-  color: var(--white);
   display: block;
   clear: both;
-}
-
-.text {
-  word-wrap: break-word;
-  width: 250px;
-  display: inline-block;
 }
