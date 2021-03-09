@@ -1,8 +1,3 @@
-.box {
-  width: 50px;
-  height: 10px;
-}
-
 .chat {
   height: 100vh;
   width: 400px;
@@ -62,33 +57,24 @@
 }
 
 .leftButton {
-  border: 1px solid var(--white);
-  background-color: var(--light-colour);
-  color: var(--white);
   border-radius: 50px 0 0 50px;
-  font-size: 17px;
-  width: 105px;
-  height: 30px;
 }
 
 .singleButton {
   border-radius: 50px;
-  width: 105px;
-  height: 30px;
+}
+
+.buttons {
   border: 1px solid var(--white);
   background-color: var(--light-colour);
   color: var(--white);
   font-size: 17px;
+  width: 105px;
+  height: 30px;
 }
 
 .rightButton {
-  border: 1px solid var(--white);
-  background-color: var(--light-colour);
   border-radius: 0 50px 50px 0;
-  color: var(--white);
-  font-size: 17px;
-  width: 105px;
-  height: 30px;
 }
 
 .splitButton {

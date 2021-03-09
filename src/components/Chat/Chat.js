@@ -6,13 +6,15 @@ import QuestionMessage from "../QuestionMessage/QuestionMessage";
 import GeneralMessage from "../GeneralMessage/GeneralMessage";
 
 function Chat(props) {
-  let db = props.db;
-  let [input, setInput] = useState("");
-  let [messages, setMessages] = useState([]);
-  let [chatState, setChatState] = useState(props.startingChat);
-  let [name, setName] = useState(props.name);
+  const db = props.db;
+  const [input, setInput] = useState("");
+  const [messages, setMessages] = useState([]);
+  const [chatState, setChatState] = useState(props.startingChat);
+  const [name, setName] = useState(props.name);
   const questions = "questions";
   const general = "general";
+  const light = "#e2e2e2";
+  const dark = "#222222";
 
   useEffect(() => {
     let selectedButton;
@@ -63,7 +65,7 @@ function Chat(props) {
 
   useEffect(() => {
     setTimeout(() => {
-      let scrollDown = document.getElementById("messages");
+      const scrollDown = document.getElementById("messages");
       scrollDown.scrollTop = scrollDown.scrollHeight;
     }, 300);
   }, [messages]);
@@ -85,14 +87,14 @@ function Chat(props) {
 
   function setActiveColours(id) {
     const selectedButton = document.getElementById(id).style;
-    selectedButton.backgroundColor = "#e2e2e2";
-    selectedButton.color = "#222222";
+    selectedButton.backgroundColor = light;
+    selectedButton.color = dark;
   }
 
   function removeActiveColours(id) {
     const prevButton = document.getElementById(id).style;
-    prevButton.backgroundColor = "#222222";
-    prevButton.color = "#e2e2e2";
+    prevButton.backgroundColor = dark;
+    prevButton.color = light;
   }
 
   function handleSubmit() {
@@ -128,21 +130,21 @@ function Chat(props) {
     <div className="chat">
       {props.hideChat ? (
         <div className="splitButton">
-          <button id="questions" className="singleButton">
+          <button id="questions" className="singleButton buttons">
             Questions
           </button>
         </div>
       ) : (
         <div className="splitButton">
           <button
-            className="leftButton"
+            className="leftButton buttons"
             id="general"
             onClick={() => handleChatChange(general)}
           >
             General
           </button>
           <button
-            className="rightButton"
+            className="rightButton buttons"
             id="questions"
             onClick={() => handleChatChange(questions)}
           >
