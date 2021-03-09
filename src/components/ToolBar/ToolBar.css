@@ -10,7 +10,8 @@
   height: 50px;
 }
 
-.icon:hover {
+.icon:hover,
+.leaveButton:hover {
   filter: brightness(140%);
 }
 
