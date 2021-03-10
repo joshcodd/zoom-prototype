@@ -4,7 +4,7 @@ function HostWindow() {
   return (
     <div className="screenContainer">
       <img
-        src={process.env.PUBLIC_URL + "/screen.png"}
+        src={process.env.PUBLIC_URL + "/screen-min.png"}
         className="screen"
         alt="Alternative Text"
       />
