@@ -15,7 +15,7 @@ function GeneralMessage(props) {
     <li key={message.id} className="generalmessage message">
       <div>{message.name}</div>
       <div> {timestamp}</div>
-      <div className="text">{message.text}</div>
+      <div className="text generalText">{message.text}</div>
     </li>
   );
 }

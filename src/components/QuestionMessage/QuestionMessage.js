@@ -40,7 +40,7 @@ function QuestionMessage(props) {
     <li key={message.id} className="questionMessage message">
       <div>{message.name}</div>
       <div>{timestamp}</div>
-      <div className="text">{message.text}</div>
+      <div className="text questionContent">{message.text}</div>
       <div className="arrows">
         <button
           className="up arrowButton"
