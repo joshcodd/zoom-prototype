@@ -40,7 +40,7 @@ function TopQuestions(props) {
       const timeDiff = time.getTime() / 1000 - lastSpeech;
       if (
         question.votes > dictateAt &&
-        timeDiff > timeLimit &&
+        timeDiff > timeLimit - 1 &&
         question.read === false
       ) {
         speak({ text: question.text });
