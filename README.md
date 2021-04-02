@@ -12,7 +12,7 @@ As part of an assignment for the module Human Computer Interaction at univeristy
 This prototype had a quick turn around time and did not actually have to be an implementation. The aim for this was to demo the improvement made.
 <br>
 
-|Assignment grade  | 100% |
+|Demonstration grade  | 100% |
 | ------------- | ------------- |
 
 Access at: <https://joshcodd.github.io/zoom-prototype/>
