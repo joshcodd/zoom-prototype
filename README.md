@@ -11,7 +11,7 @@ My prototype includes a real time chat, along with the following improvements:
 
 This prototype had a quick turn around time and did not actually have to be an implementation. The aim for this was to demo the improvement made.
 <br>
-<br>
+
 Access at: <https://joshcodd.github.io/zoom-prototype/>
 
 
