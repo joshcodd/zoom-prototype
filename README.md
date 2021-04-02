@@ -9,6 +9,9 @@ My prototype includes a real time chat, along with the following improvements:
 - The host settings allow the lecturer to set the amount of votes questions are read at.
 - The student settings alows the student to hide the general chat to avoid distractions.
 
+This prototype had a quick turn around time and did not actually have to be an implementation. The aim for this was to demo the improvement made.
+Access at: <https://joshcodd.github.io/zoom-prototype/>
+
 
 ## What did i learn?
 
