@@ -1,7 +1,7 @@
 # Zoom Prototype 
 As part of an assignment for the module Human Computer Interaction at univeristy I was tasked with designing and prototyping a improvement to zoom. The main issue I found with my experience of using Zoom for online teaching was the highly active and off topic chat, in which questions for the lecturer would be missed.
 
-My prototype includes a real time chat, along with the following improvements:
+## My prototype includes a real time chat, along with the following improvements:
 - Seperate general and questions chat feeds.
 - Up-vote and down-vote questions.
 - Top 3 voted questions are always displayed underneath the hosts view.
