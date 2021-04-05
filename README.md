@@ -1,5 +1,5 @@
 # Zoom Prototype 
-As part of an assignment for the module Human-computer interaction at university, I was tasked with designing and prototyping an improvement to zoom. The main issue I found with my experience of using Zoom for online teaching was the highly active and off-topic chat, in which questions for the lecturer would be missed.
+As part of an assignment for the module Human-computer interaction at university, I was tasked with designing and prototyping an improvement to Zoom, the video conferencing software we currently use for online lectures. The main issue I found with my experience of using Zoom for online teaching was the highly active and off-topic chat, in which questions for the lecturer would be missed.
 
 #### My prototype includes a real-time chat, along with the following improvements:  
 - Separate general and questions chat feeds.
