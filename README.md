@@ -33,7 +33,7 @@ In the root of the project run:
 
 Then, start the development server with:
 
-### `npm run dev`
+### `npm start`
 
 <br/>
 
